@@ -17,10 +17,11 @@ public class ParkingLotTest {
     @Test
     void givenParkingLotWithSizeOne_whenCheckIsAvailable_ThenShouldNotBeAvailable() throws ParkingLotException {
         ParkingLot parkingLot = new ParkingLot(1);
-
-        assertTrue(parkingLot.park(new Object()));
+        Object vehicle1=new Object();
+        Object vehicle2=new Object();
+        assertTrue(parkingLot.park(vehicle1));
         ParkingLotException thrown = assertThrows(ParkingLotException.class, () -> {
-            parkingLot.park(new Object());
+            parkingLot.park(vehicle2);
         });
         assertEquals("capacity is full", thrown.getMessage());
     }

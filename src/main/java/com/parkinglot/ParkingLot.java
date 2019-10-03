@@ -31,5 +31,4 @@ public class ParkingLot {
     private boolean isSpaceAvailable() {
         return vehicles.size() < size;
     }
-
 }

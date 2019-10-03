@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7ef90b10-4cbc-4b22-b2bf-1c8223310350" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/parkinglot/ParkingLot.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/parkinglot/ParkingLot.class" afterDir="false" />
+    <list default="true" id="7ef90b10-4cbc-4b22-b2bf-1c8223310350" name="Default Changelist" comment="[Sunil|Dipak] Add. can able to park anything">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/parkinglot/Consumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/parkinglot/ParkingLotTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/parkinglot/ParkingLotTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.parkinglot.ParkingLotTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/com.parkinglot.ParkingLotTest.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
@@ -23,11 +24,21 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -60,7 +71,40 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.ParkingLotTest.givenParkingLotWithCapacityTwo_whenParkSameTwoVehicles_thenShouldNotBePark">
+  <component name="RunManager" selected="Application.Consumer">
+    <configuration name="Consumer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.parkinglot.Consumer" />
+      <module name="ParkingLot.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.parkinglot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ParkingLotTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.parkinglot.ParkingLotTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="ParkingLotTest.givenParkingLotWithCapacityTwo_whenParkSameTwoObject_thenShouldNotBePark" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -121,53 +165,13 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ParkingLotTest.givenParkingLot_whenCheckForAvailable_thenShouldbeAvailable" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.parkinglot.ParkingLotTest.givenParkingLot_whenCheckForAvailable_thenShouldbeAvailable&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="ParkingLotTest.givenParkingLot_whenPark_thenShouldbePark" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.parkinglot.ParkingLotTest.givenParkingLot_whenPark_thenShouldbePark&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.ParkingLotTest.givenParkingLotWithCapacityTwo_whenParkSameTwoVehicles_thenShouldNotBePark" />
         <item itemvalue="Gradle.ParkingLotTest.givenParkingLotWithSizeOne_whenCheckIsAvailable_ThenShouldNotBeAvailable" />
+        <item itemvalue="Application.Consumer" />
+        <item itemvalue="Gradle.ParkingLotTest" />
+        <item itemvalue="Gradle.ParkingLotTest.givenParkingLotWithCapacityTwo_whenParkSameTwoVehicles_thenShouldNotBePark" />
         <item itemvalue="Gradle.ParkingLotTest.givenParkingLotWithCapacityTwo_whenParkSameTwoObject_thenShouldNotBePark" />
-        <item itemvalue="Gradle.ParkingLotTest.givenParkingLot_whenPark_thenShouldbePark" />
-        <item itemvalue="Gradle.ParkingLotTest.givenParkingLot_whenCheckForAvailable_thenShouldbeAvailable" />
       </list>
     </recent_temporary>
   </component>
@@ -206,5 +210,19 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="[Sunil|Dipak] Add. can able to park anything" />
     <option name="LAST_COMMIT_MESSAGE" value="[Sunil|Dipak] Add. can able to park anything" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/com/parkinglot/ParkingLotTest.java</url>
+          <line>17</line>
+          <properties class="com.parkinglot.ParkingLotTest" method="givenParkingLotWithSizeOne_whenCheckIsAvailable_ThenShouldNotBeAvailable">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
