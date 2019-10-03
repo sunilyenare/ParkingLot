@@ -1,5 +1,6 @@
 package com.parkinglot;
 
+import java.io.InvalidObjectException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,15 +13,15 @@ public class ParkingLot {
         this.vehicles = new ArrayList<>();
     }
 
-    public boolean park(Object vehicle) {
+    public boolean park(Object vehicle) throws ParkingLotException {
         if (isSpaceAvailable()) {
             if (isAlreadyParked(vehicle)) {
-                return false;
+                throw new ParkingLotException("vehicle already park");
             }
             vehicles.add(vehicle);
             return true;
         }
-        return false;
+       throw new ParkingLotException("capacity is full");
     }
 
     private boolean isAlreadyParked(Object vehicle) {

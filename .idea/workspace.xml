@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ef90b10-4cbc-4b22-b2bf-1c8223310350" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/parkinglot/ParkingLot.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/parkinglot/ParkingLot.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/parkinglot/ParkingLotTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/parkinglot/ParkingLotTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.parkinglot.ParkingLotTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/com.parkinglot.ParkingLotTest.html" afterDir="false" />
@@ -39,6 +38,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="full.screen.before.presentation.mode" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
@@ -60,13 +60,53 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.ParkingLotTest.givenParkingLotWithCapacityTwo_whenParkSameTwoObject_thenShouldNotBePark">
+  <component name="RunManager" selected="Gradle.ParkingLotTest.givenParkingLotWithCapacityTwo_whenParkSameTwoVehicles_thenShouldNotBePark">
     <configuration name="ParkingLotTest.givenParkingLotWithCapacityTwo_whenParkSameTwoObject_thenShouldNotBePark" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" value="--tests &quot;com.parkinglot.ParkingLotTest.givenParkingLotWithCapacityTwo_whenParkSameTwoObject_thenShouldNotBePark&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="ParkingLotTest.givenParkingLotWithCapacityTwo_whenParkSameTwoVehicles_thenShouldNotBePark" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.parkinglot.ParkingLotTest.givenParkingLotWithCapacityTwo_whenParkSameTwoVehicles_thenShouldNotBePark&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="ParkingLotTest.givenParkingLotWithSizeOne_whenCheckIsAvailable_ThenShouldNotBeAvailable" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.parkinglot.ParkingLotTest.givenParkingLotWithSizeOne_whenCheckIsAvailable_ThenShouldNotBeAvailable&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -123,6 +163,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.ParkingLotTest.givenParkingLotWithCapacityTwo_whenParkSameTwoVehicles_thenShouldNotBePark" />
+        <item itemvalue="Gradle.ParkingLotTest.givenParkingLotWithSizeOne_whenCheckIsAvailable_ThenShouldNotBeAvailable" />
         <item itemvalue="Gradle.ParkingLotTest.givenParkingLotWithCapacityTwo_whenParkSameTwoObject_thenShouldNotBePark" />
         <item itemvalue="Gradle.ParkingLotTest.givenParkingLot_whenPark_thenShouldbePark" />
         <item itemvalue="Gradle.ParkingLotTest.givenParkingLot_whenCheckForAvailable_thenShouldbeAvailable" />
