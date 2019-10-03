@@ -1,36 +1,38 @@
 package com.parkinglot;
 
 import com.parkinglot.exception.CapacityFullException;
+import com.parkinglot.exception.VehicleAlreadyPark;
 
 public class Consumer {
-    public static void park(ParkingLot parkingLotOne, ParkingLot parkingLotTwo) throws CapacityFullException {
+    public static void park(ParkingLot parkingLotOne, ParkingLot parkingLotTwo) throws CapacityFullException, VehicleAlreadyPark {
         Object carA = new Object();
         Object carB = new Object();
         Object carC = new Object();
+        Object[] Vehicles = {carA, carB, carC, carA};
+        int counter = 0;
         try {
-            try {
-                parkingLotOne.park(carA);
-                parkingLotOne.park(carA);
-            } catch (CapacityFullException e) {
-                System.out.println(e);
+            for (int entry = 0; entry < Vehicles.length; entry++) {
+                parkingLotOne.park(Vehicles[counter]);
+                System.out.println(Vehicles[counter].hashCode() + " Park");
+                counter++;
             }
-            parkingLotOne.park(carC);
         } catch (CapacityFullException e) {
-
-            System.out.println(e);
+            System.out.println(e.getMessage() + " move your vehicle " + Vehicles[counter].hashCode() + " to another parking lot");
+            counter=0;
         }
-
-//        try {
-//            parkingLotTwo.park(carA);
-//            parkingLotTwo.park(carA);
-//        } catch (ParkingLotException e) {
-//            System.out.println(e);
-//        }
-
-
+        System.out.println("--------------------***********-----------------");
+        try {
+            for (int entry = 0; entry < Vehicles.length; entry++) {
+                parkingLotTwo.park(Vehicles[counter]);
+                System.out.println(Vehicles[counter].hashCode() + " Park");
+                counter++;
+            }
+        } catch (VehicleAlreadyPark e) {
+            System.out.println(Vehicles[counter].hashCode() + " this " + e.getMessage());
+        }
     }
 
-    public static void main(String args[]) throws CapacityFullException {
-        park(new ParkingLot(2), new ParkingLot(3));
+    public static void main(String args[]) throws CapacityFullException, VehicleAlreadyPark {
+        park(new ParkingLot(2), new ParkingLot(4));
     }
 }

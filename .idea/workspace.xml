@@ -2,18 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ef90b10-4cbc-4b22-b2bf-1c8223310350" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/parkinglot/exception/VehicleAlreadyPark.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/parkinglot/ParkingLot.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/parkinglot/ParkingLot.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/parkinglot/ParkingLotException.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.parkinglot.ParkingLotTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/com.parkinglot.ParkingLotTest.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/com.parkinglot.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/com.parkinglot.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.parkinglot.ParkingLotTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-com.parkinglot.ParkingLotTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/parkinglot/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/parkinglot/Consumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/parkinglot/ParkingLot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/parkinglot/ParkingLot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/parkinglot/ParkingLotException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/parkinglot/exception/CapacityFullException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/parkinglot/ParkingLotTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/parkinglot/ParkingLotTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -202,7 +199,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570112107453</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="[Sunil] Refactor. Exception class">
+      <created>1570123898148</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1570123898148</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -221,7 +225,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="[Sunil|Dipak] Add. can able to park anything" />
     <MESSAGE value="[Sunil|Dipak] temp Error" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Sunil|Dipak] temp Error" />
+    <MESSAGE value="[Sunil] Refactor. Exception class" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Sunil] Refactor. Exception class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

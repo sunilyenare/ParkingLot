@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.parkinglot.ParkingLotTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-10-03T13:16:26" hostname="SUNILs-MacBook-Pro.local" time="0.008">
+<testsuite name="com.parkinglot.ParkingLotTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2019-10-03T17:25:54" hostname="SUNILs-MacBook-Pro.local" time="0.01">
   <properties/>
-  <testcase name="givenParkingLotWithSizeOne_whenCheckIsAvailable_ThenShouldNotBeAvailable()" classname="com.parkinglot.ParkingLotTest" time="0.008"/>
+  <testcase name="givenParkingLot_whenIsAvailable_ThenShouldBeAvailable()" classname="com.parkinglot.ParkingLotTest" time="0.007"/>
+  <testcase name="givenParkingLotWithSizeOne_whenCheckIsAvailable_ThenShouldNotBeAvailable()" classname="com.parkinglot.ParkingLotTest" time="0.002"/>
+  <testcase name="givenParkingLotWithCapacityTwo_whenParkSameTwoVehicles_thenShouldNotBePark()" classname="com.parkinglot.ParkingLotTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
