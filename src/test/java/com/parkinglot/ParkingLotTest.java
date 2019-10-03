@@ -13,10 +13,20 @@ public class ParkingLotTest {
     }
 
     @Test
-    void givenParkingLotWithSizeZero_whenCheckIsAvailable_ThenShouldNotBeAvailable() {
+    void givenParkingLotWithSizeOne_whenCheckIsAvailable_ThenShouldNotBeAvailable() {
         ParkingLot parkingLot = new ParkingLot(1);
 
         Assertions.assertTrue(parkingLot.park(new Object()));
         Assertions.assertFalse(parkingLot.park(new Object()));
     }
+
+    @Test
+    void givenParkingLotWithCapacityTwo_whenParkSameTwoVehicles_thenShouldNotBePark() {
+        ParkingLot parkingLot = new ParkingLot(2);
+
+        Object vehicle = new Object();
+        Assertions.assertTrue(parkingLot.park(vehicle));
+        Assertions.assertFalse(parkingLot.park(vehicle));
+    }
+
 }

@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ef90b10-4cbc-4b22-b2bf-1c8223310350" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/parkinglot/ParkingLot.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/parkinglot/ParkingLot.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/parkinglot/ParkingLotTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/parkinglot/ParkingLotTest.class" afterDir="false" />
@@ -61,7 +60,27 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.ParkingLotTest.givenParkingLot_whenPark_thenShouldbePark">
+  <component name="RunManager" selected="Gradle.ParkingLotTest.givenParkingLotWithCapacityTwo_whenParkSameTwoObject_thenShouldNotBePark">
+    <configuration name="ParkingLotTest.givenParkingLotWithCapacityTwo_whenParkSameTwoObject_thenShouldNotBePark" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.parkinglot.ParkingLotTest.givenParkingLotWithCapacityTwo_whenParkSameTwoObject_thenShouldNotBePark&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="ParkingLotTest.givenParkingLot_whenCheckForAvailable_thenShouldbeAvailable" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -104,6 +123,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.ParkingLotTest.givenParkingLotWithCapacityTwo_whenParkSameTwoObject_thenShouldNotBePark" />
         <item itemvalue="Gradle.ParkingLotTest.givenParkingLot_whenPark_thenShouldbePark" />
         <item itemvalue="Gradle.ParkingLotTest.givenParkingLot_whenCheckForAvailable_thenShouldbeAvailable" />
       </list>
@@ -120,6 +140,14 @@
       <option name="presentableId" value="Default" />
       <updated>1570087750397</updated>
     </task>
+    <task id="LOCAL-00001" summary="[Sunil|Dipak] Add. can able to park anything">
+      <created>1570094095071</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1570094095071</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -132,5 +160,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="[Sunil|Dipak] Add. can able to park anything" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Sunil|Dipak] Add. can able to park anything" />
   </component>
 </project>
