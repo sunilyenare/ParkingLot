@@ -18,7 +18,7 @@ public class Consumer {
             }
         } catch (CapacityFullException e) {
             System.out.println(e.getMessage() + " move your vehicle " + Vehicles[counter].hashCode() + " to another parking lot");
-            counter=0;
+            counter = 0;
         }
         System.out.println("--------------------***********-----------------");
         try {

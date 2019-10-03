@@ -23,7 +23,7 @@ public class ParkingLot {
             vehicles.add(vehicle);
             return true;
         }
-       throw new CapacityFullException("capacity is full");
+        throw new CapacityFullException("capacity is full");
     }
 
     private boolean isAlreadyParked(Object vehicle) {
@@ -32,5 +32,9 @@ public class ParkingLot {
 
     private boolean isSpaceAvailable() {
         return vehicles.size() < size;
+    }
+
+    public boolean unPark(Object vehicle) {
+        return  vehicles.remove(vehicle);
     }
 }
