@@ -7,16 +7,22 @@ import com.parkinglot.exception.VehicleAlreadyPark;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ParkingLot implements Notification {
+public class ParkingLot  {
     private final int size;
     private final List<Object> vehicles;
+    private final String message="parking full";
+    private ParkingLotOwner owner;
 
     public ParkingLot(int size) {
         this.size = size;
         this.vehicles = new ArrayList<>();
     }
 
-
+    public ParkingLot(int size,ParkingLotOwner owner) {
+        this.size = size;
+        this.owner=owner;
+        this.vehicles = new ArrayList<>();
+    }
     public boolean park(Object vehicle) throws CapacityFullException, VehicleAlreadyPark {
         if (!isSpaceAvailable()) {
             throw new CapacityFullException("capacity is full");
@@ -26,6 +32,10 @@ public class ParkingLot implements Notification {
             throw new VehicleAlreadyPark("vehicle already park");
         }
         vehicles.add(vehicle);
+
+        if(vehicles.size()==size){
+            sendMessage();
+        }
         return true;
     }
 
@@ -48,8 +58,11 @@ public class ParkingLot implements Notification {
     }
 
 
-    @Override
-    public String update(String message) {
+    String notification(){
         return message;
+    }
+
+    public void sendMessage() {
+        owner.setMessage(notification());
     }
 }
