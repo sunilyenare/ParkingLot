@@ -5,7 +5,12 @@ import com.parkinglot.exception.VehicleAlreadyPark;
 
 public class Consumer {
     public static void park(ParkingLot parkingLotOne, ParkingLot parkingLotTwo) throws CapacityFullException, VehicleAlreadyPark {
-        Object carA = new Object();
+        Object carA = new Object() {
+            @Override
+            public String toString() {
+                return "carA";
+            }
+        };
         Object carB = new Object();
         Object carC = new Object();
         Object[] Vehicles = {carA, carB, carC, carA};

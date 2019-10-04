@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7ef90b10-4cbc-4b22-b2bf-1c8223310350" name="Default Changelist" comment="">
+    <list default="true" id="7ef90b10-4cbc-4b22-b2bf-1c8223310350" name="Default Changelist" comment="[Sunil] Add. Exception for unpark vehicle which is not present in parking lot">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/parkinglot/ParkingLot.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/parkinglot/ParkingLot.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/parkinglot/ParkingLotException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/parkinglot/ParkingLotTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/parkinglot/ParkingLotTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.parkinglot.ParkingLotTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/com.parkinglot.ParkingLotTest.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/com.parkinglot.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/com.parkinglot.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.parkinglot.ParkingLotTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-com.parkinglot.ParkingLotTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/parkinglot/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/parkinglot/Consumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/parkinglot/ParkingLot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/parkinglot/ParkingLot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/parkinglot/ParkingLotTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/parkinglot/ParkingLotTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -70,13 +72,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Consumer">
+  <component name="RunManager" selected="Gradle.ParkingLotTest">
     <configuration name="Consumer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.parkinglot.Consumer" />
       <module name="ParkingLot.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.parkinglot.exception.*" />
+          <option name="PATTERN" value="com.parkinglot.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -104,12 +106,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ParkingLotTest.givenParkingLotWithCapacityTwo_whenParkSameTwoObject_thenShouldNotBePark" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ParkingLotTest.givenParkingLotWithCapacityOne_whenUnParkVehicle_thenShouldReturnSpaceIsAvailable" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.parkinglot.ParkingLotTest.givenParkingLotWithCapacityTwo_whenParkSameTwoObject_thenShouldNotBePark&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.parkinglot.ParkingLotTest.givenParkingLotWithCapacityOne_whenUnParkVehicle_thenShouldReturnSpaceIsAvailable&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -144,12 +146,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ParkingLotTest.givenParkingLotWithSizeOne_whenCheckIsAvailable_ThenShouldNotBeAvailable" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ParkingLotTest.givenParkingLotWithCapacityTwo_whenUnParkSameVehicle_thenShouldThrowException" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.parkinglot.ParkingLotTest.givenParkingLotWithSizeOne_whenCheckIsAvailable_ThenShouldNotBeAvailable&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.parkinglot.ParkingLotTest.givenParkingLotWithCapacityTwo_whenUnParkSameVehicle_thenShouldThrowException&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -166,11 +168,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.ParkingLotTest.givenParkingLotWithSizeOne_whenCheckIsAvailable_ThenShouldNotBeAvailable" />
-        <item itemvalue="Application.Consumer" />
         <item itemvalue="Gradle.ParkingLotTest" />
+        <item itemvalue="Gradle.ParkingLotTest.givenParkingLotWithCapacityOne_whenUnParkVehicle_thenShouldReturnSpaceIsAvailable" />
+        <item itemvalue="Application.Consumer" />
+        <item itemvalue="Gradle.ParkingLotTest.givenParkingLotWithCapacityTwo_whenUnParkSameVehicle_thenShouldThrowException" />
         <item itemvalue="Gradle.ParkingLotTest.givenParkingLotWithCapacityTwo_whenParkSameTwoVehicles_thenShouldNotBePark" />
-        <item itemvalue="Gradle.ParkingLotTest.givenParkingLotWithCapacityTwo_whenParkSameTwoObject_thenShouldNotBePark" />
       </list>
     </recent_temporary>
   </component>
@@ -206,7 +208,35 @@
       <option name="project" value="LOCAL" />
       <updated>1570123898148</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="[Sunil] Consumer can handle exception">
+      <created>1570126032823</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1570126032823</updated>
+    </task>
+    <task id="LOCAL-00005" summary="[Sunil] Add. parking lot with two capacity when unpark one vehicle then space is available">
+      <created>1570127379347</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1570127379347</updated>
+    </task>
+    <task id="LOCAL-00006" summary="[Sunil] Add. parking lot with two capacity when unpark one vehicle then space is available">
+      <created>1570127572742</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1570127572742</updated>
+    </task>
+    <task id="LOCAL-00007" summary="[Sunil] Add. Exception for unpark vehicle which is not present in parking lot">
+      <created>1570129990770</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1570129990770</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -223,23 +253,41 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="[Sunil|Dipak] Add. can able to park anything" />
     <MESSAGE value="[Sunil|Dipak] temp Error" />
     <MESSAGE value="[Sunil] Refactor. Exception class" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Sunil] Refactor. Exception class" />
+    <MESSAGE value="[Sunil] Consumer can handle exception" />
+    <MESSAGE value="[Sunil] Add. parking lot with two capacity when unpark one vehicle then space is available" />
+    <MESSAGE value="[Sunil] Add. Exception for unpark vehicle which is not" />
+    <MESSAGE value="[Sunil] Add. Exception for unpark vehicle which is not present in parking lot" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Sunil] Add. Exception for unpark vehicle which is not present in parking lot" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/com/parkinglot/ParkingLotTest.java</url>
-          <line>17</line>
+          <line>19</line>
           <properties class="com.parkinglot.ParkingLotTest" method="givenParkingLotWithSizeOne_whenCheckIsAvailable_ThenShouldNotBeAvailable">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/parkinglot/ParkingLot.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/parkinglot/ParkingLot.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ParkingLot$ParkingLotTest.ic" NAME="ParkingLotTest Coverage Results" MODIFIED="1570130008381" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

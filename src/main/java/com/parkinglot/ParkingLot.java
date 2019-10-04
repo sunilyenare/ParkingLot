@@ -35,10 +35,11 @@ public class ParkingLot {
         return vehicles.size() < size;
     }
 
-    public boolean unPark(Object vehicle) throws UnParkException {
+    public Object unPark(Object vehicle) throws UnParkException {
         if(vehicles.size()!=0){
             if(vehicles.contains(vehicle)){
-                return vehicles.remove(vehicle);
+                vehicles.remove(vehicle);
+                return vehicle;
             }
             throw new UnParkException("VEHICLE NO LONGER AVAILABLE IN PARKING LOT");
         }

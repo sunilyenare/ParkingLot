@@ -41,23 +41,23 @@ public class ParkingLotTest {
     }
 
     @Test
-    void givenParkingLotWithCapacityOne_whenUnParkVehicle_thenShouldReturnSpaceIsAvailable() throws VehicleAlreadyPark, CapacityFullException, UnParkException {
+    void givenParkingLotWithCapacityOne_whenUnParkVehicle_thenShouldReturnVehicle() throws VehicleAlreadyPark, CapacityFullException, UnParkException {
         ParkingLot parkingLot = new ParkingLot(1);
         Object vehicle = new Object();
 
         assertTrue(parkingLot.park(vehicle));
-        assertTrue(parkingLot.unPark(vehicle));
+        assertEquals(vehicle,parkingLot.unPark(vehicle));
     }
 
     @Test
-    void givenParkingLotWithCapacityTwo_whenUnParkOneVehicle_thenShouldReturnSpaceIsAvailable() throws VehicleAlreadyPark, CapacityFullException, UnParkException {
+    void givenParkingLotWithCapacityTwo_whenUnParkOneVehicle_thenShouldReturnVehicle() throws VehicleAlreadyPark, CapacityFullException, UnParkException {
         ParkingLot parkingLot = new ParkingLot(2);
         Object vehicleOne = new Object();
         Object vehicleTwo = new Object();
         parkingLot.park(vehicleOne);
         parkingLot.park(vehicleTwo);
 
-        assertTrue(parkingLot.unPark(vehicleTwo));
+        assertEquals(vehicleTwo,parkingLot.unPark(vehicleTwo));
     }
     @Test
     void givenParkingLotWithCapacityTwo_whenUnParkNotAvailableVehicle_thenShouldThrowException() throws VehicleAlreadyPark, CapacityFullException, UnParkException {
@@ -67,8 +67,8 @@ public class ParkingLotTest {
         parkingLot.park(vehicleOne);
         parkingLot.park(vehicleTwo);
 
-        assertTrue(parkingLot.unPark(vehicleOne));
-        assertTrue(parkingLot.unPark(vehicleTwo));
+        assertEquals(vehicleOne,parkingLot.unPark(vehicleOne));
+        assertEquals(vehicleTwo,parkingLot.unPark(vehicleTwo));
 
 
         UnParkException thrown = assertThrows(UnParkException.class, () -> {
@@ -85,8 +85,8 @@ public class ParkingLotTest {
         parkingLot.park(vehicleOne);
         parkingLot.park(vehicleTwo);
 
-        assertTrue(parkingLot.unPark(vehicleOne));
-        assertTrue(parkingLot.unPark(vehicleTwo));
+        assertEquals(vehicleOne,parkingLot.unPark(vehicleOne));
+        assertEquals(vehicleTwo,parkingLot.unPark(vehicleTwo));
 
 
         UnParkException thrown = assertThrows(UnParkException.class, () -> {
