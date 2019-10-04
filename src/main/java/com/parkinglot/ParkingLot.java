@@ -1,13 +1,13 @@
 package com.parkinglot;
 
 import com.parkinglot.exception.CapacityFullException;
-import com.parkinglot.exception.UnParkException;
+import com.parkinglot.exception.CarNotFoundException;
 import com.parkinglot.exception.VehicleAlreadyPark;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ParkingLot {
+public class ParkingLot implements Notification {
     private final int size;
     private final List<Object> vehicles;
 
@@ -16,15 +16,17 @@ public class ParkingLot {
         this.vehicles = new ArrayList<>();
     }
 
+
     public boolean park(Object vehicle) throws CapacityFullException, VehicleAlreadyPark {
-        if (isSpaceAvailable()) {
-            if (isAlreadyParked(vehicle)) {
-                throw new VehicleAlreadyPark("vehicle already park");
-            }
-            vehicles.add(vehicle);
-            return true;
+        if (!isSpaceAvailable()) {
+            throw new CapacityFullException("capacity is full");
         }
-        throw new CapacityFullException("capacity is full");
+
+        if (isAlreadyParked(vehicle)) {
+            throw new VehicleAlreadyPark("vehicle already park");
+        }
+        vehicles.add(vehicle);
+        return true;
     }
 
     private boolean isAlreadyParked(Object vehicle) {
@@ -35,15 +37,19 @@ public class ParkingLot {
         return vehicles.size() < size;
     }
 
-    public Object unPark(Object vehicle) throws UnParkException {
-        if(vehicles.size()!=0){
-            if(vehicles.contains(vehicle)){
-                vehicles.remove(vehicle);
-                return vehicle;
-            }
-            throw new UnParkException("VEHICLE NO LONGER AVAILABLE IN PARKING LOT");
+    public Object unPark(Object vehicle) throws CarNotFoundException {
+        if (vehicles.size() == 0) {
+            throw new CarNotFoundException("VEHICLE NO LONGER AVAILABLE IN PARKING LOT");
         }
+        if (!isAlreadyParked(vehicle)) {
+            throw new CarNotFoundException("VEHICLE NO LONGER AVAILABLE IN PARKING LOT");
+        }
+        return vehicles.remove(vehicles.indexOf(vehicle));
+    }
 
-        throw new UnParkException("VEHICLE NO LONGER AVAILABLE IN PARKING LOT");
+
+    @Override
+    public String update(String message) {
+        return message;
     }
 }

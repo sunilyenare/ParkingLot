@@ -1,7 +1,7 @@
 package com.parkinglot;
 
 import com.parkinglot.exception.CapacityFullException;
-import com.parkinglot.exception.UnParkException;
+import com.parkinglot.exception.CarNotFoundException;
 import com.parkinglot.exception.VehicleAlreadyPark;
 import org.junit.jupiter.api.Test;
 
@@ -41,7 +41,7 @@ public class ParkingLotTest {
     }
 
     @Test
-    void givenParkingLotWithCapacityOne_whenUnParkVehicle_thenShouldReturnVehicle() throws VehicleAlreadyPark, CapacityFullException, UnParkException {
+    void givenParkingLotWithCapacityOne_whenUnParkVehicle_thenShouldReturnVehicle() throws VehicleAlreadyPark, CapacityFullException, CarNotFoundException {
         ParkingLot parkingLot = new ParkingLot(1);
         Object vehicle = new Object();
 
@@ -50,7 +50,7 @@ public class ParkingLotTest {
     }
 
     @Test
-    void givenParkingLotWithCapacityTwo_whenUnParkOneVehicle_thenShouldReturnVehicle() throws VehicleAlreadyPark, CapacityFullException, UnParkException {
+    void givenParkingLotWithCapacityTwo_whenUnParkOneVehicle_thenShouldReturnVehicle() throws VehicleAlreadyPark, CapacityFullException, CarNotFoundException {
         ParkingLot parkingLot = new ParkingLot(2);
         Object vehicleOne = new Object();
         Object vehicleTwo = new Object();
@@ -60,7 +60,7 @@ public class ParkingLotTest {
         assertEquals(vehicleTwo,parkingLot.unPark(vehicleTwo));
     }
     @Test
-    void givenParkingLotWithCapacityTwo_whenUnParkNotAvailableVehicle_thenShouldThrowException() throws VehicleAlreadyPark, CapacityFullException, UnParkException {
+    void givenParkingLotWithCapacityTwo_whenUnParkNotAvailableVehicle_thenShouldThrowException() throws VehicleAlreadyPark, CapacityFullException, CarNotFoundException {
         ParkingLot parkingLot = new ParkingLot(2);
         Object vehicleOne = new Object();
         Object vehicleTwo = new Object();
@@ -71,14 +71,14 @@ public class ParkingLotTest {
         assertEquals(vehicleTwo,parkingLot.unPark(vehicleTwo));
 
 
-        UnParkException thrown = assertThrows(UnParkException.class, () -> {
+        CarNotFoundException thrown = assertThrows(CarNotFoundException.class, () -> {
             parkingLot.unPark(vehicleTwo);
         });
         assertEquals("VEHICLE NO LONGER AVAILABLE IN PARKING LOT", thrown.getMessage());
     }
 
     @Test
-    void givenParkingLotWithCapacityTwo_whenUnParkThreeVehicle_thenShouldThrowException() throws VehicleAlreadyPark, CapacityFullException, UnParkException {
+    void givenParkingLotWithCapacityTwo_whenUnParkThreeVehicle_thenShouldThrowException() throws VehicleAlreadyPark, CapacityFullException, CarNotFoundException {
         ParkingLot parkingLot = new ParkingLot(2);
         Object vehicleOne = new Object();
         Object vehicleTwo = new Object();
@@ -89,10 +89,25 @@ public class ParkingLotTest {
         assertEquals(vehicleTwo,parkingLot.unPark(vehicleTwo));
 
 
-        UnParkException thrown = assertThrows(UnParkException.class, () -> {
+        CarNotFoundException thrown = assertThrows(CarNotFoundException.class, () -> {
             parkingLot.unPark(vehicleTwo);
         });
         assertEquals("VEHICLE NO LONGER AVAILABLE IN PARKING LOT", thrown.getMessage());
     }
+
+    @Test
+    void givenParkingLotWithCapacityTwo_WhenReachToCapacity_ThenNotifyToOwner() throws VehicleAlreadyPark, CapacityFullException {
+        ParkingLot parkingLot=new ParkingLot(2);
+        Object vehicleOne = new Object();
+        Object vehicleTwo = new Object();
+        parkingLot.park(vehicleOne);
+        parkingLot.park(vehicleTwo);
+
+
+        ParkingLotObserver observer=new ParkingLotObserver();
+      //  assertEquals("parking full",observer.update("ko"));
+    }
+
+
 
 }
