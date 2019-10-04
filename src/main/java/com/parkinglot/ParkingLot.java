@@ -11,16 +11,16 @@ public class ParkingLot  {
     private final int size;
     private final List<Object> vehicles;
     private final String message="parking full";
-    private ParkingLotOwner owner;
+    private Observer person;
 
     public ParkingLot(int size) {
         this.size = size;
         this.vehicles = new ArrayList<>();
     }
 
-    public ParkingLot(int size,ParkingLotOwner owner) {
+    public ParkingLot(int size,Observer person) {
         this.size = size;
-        this.owner=owner;
+        this.person=person;
         this.vehicles = new ArrayList<>();
     }
     public boolean park(Object vehicle) throws CapacityFullException, VehicleAlreadyPark {
@@ -63,6 +63,6 @@ public class ParkingLot  {
     }
 
     public void sendMessage() {
-        owner.setMessage(notification());
+        person.setMessage(notification());
     }
 }
