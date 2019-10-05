@@ -10,7 +10,7 @@ import java.util.List;
 public class ParkingLot {
     private final int size;
     private final List<Object> vehicles;
-    private List<Observer> observer; // TODO - can be initialized with empty list.
+    private List<Observer> observer;
 
 
     public ParkingLot(int size, List<Observer> observer) {
@@ -29,12 +29,16 @@ public class ParkingLot {
         }
         vehicles.add(vehicle);
 
-        if (vehicles.size() == size) { // TODO - name conditons
+        if (parkingLotFull()) { // TODO - name conditons
 
             for (Observer o : observer) { // TODO - name loops
                 o.isParkingLotFull();
             }
         }
+    }
+
+    private boolean parkingLotFull() {
+        return vehicles.size() == size;
     }
 
     private boolean isAlreadyParked(Object vehicle) {
@@ -53,8 +57,7 @@ public class ParkingLot {
             throw new CarNotFoundException();
         }
         Object unParkVehicle = vehicles.remove(vehicles.indexOf(vehicle));
-        if (vehicles.size() != size) {
-
+        if (!parkingLotFull()) {
 
             for (Observer o : observer) {
                 o.isSpaceIsAvailable();
