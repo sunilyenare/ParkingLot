@@ -13,6 +13,7 @@ public class ParkingLot {
     private List<Observer> observer;
 
 
+
     public ParkingLot(int size, List<Observer> observer) {
         this.size = size;
         this.observer = observer;
@@ -29,11 +30,14 @@ public class ParkingLot {
         }
         vehicles.add(vehicle);
 
-        if (parkingLotFull()) { // TODO - name conditons
+        if (parkingLotFull()) {
+            sendAlert();
+        }
+    }
 
-            for (Observer o : observer) { // TODO - name loops
-                o.isParkingLotFull();
-            }
+    private void sendAlert() {
+        for (Observer o : observer) {
+            o.isParkingLotFull();
         }
     }
 
@@ -58,13 +62,23 @@ public class ParkingLot {
         }
         Object unParkVehicle = vehicles.remove(vehicles.indexOf(vehicle));
         if (!parkingLotFull()) {
-
-            for (Observer o : observer) {
-                o.isSpaceIsAvailable();
-            }
+            sendReminder();
         }
         return unParkVehicle;
     }
 
+    private void sendReminder() {
+        for (Observer o : observer) {
+            o.isSpaceIsAvailable();
+        }
+    }
 
+
+    public void register(Observer registerPerson) {
+        observer.add(registerPerson);
+    }
+
+    public void unRegister(Observer unRegisterperson) {
+        observer.remove(unRegisterperson);
+    }
 }

@@ -1,6 +1,6 @@
 package com.parkinglot;
 
-class DummyParkingLotOwner implements Observer {
+public class DummyParkingLotPerson implements Observer {
     public int isParkingLotFullNotify = 0;
     public int isSpaceIsAvailableNotify = 0;
 
