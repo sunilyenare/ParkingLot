@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.parkinglot.ParkingLotTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-10-05T05:15:51" hostname="SUNILs-MacBook-Pro.local" time="0.009">
+<testsuite name="com.parkinglot.ParkingLotTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-10-05T05:20:48" hostname="SUNILs-MacBook-Pro.local" time="0.009">
   <properties/>
-  <testcase name="givenParkingLotWithCapacityTwo_WhenUnPark_ThenNotifyToOwner()" classname="com.parkinglot.ParkingLotTest" time="0.009"/>
+  <testcase name="givenParkingLotWithCapacityTwo_WhenUnPark_ThenNotifyToSecurityPerson()" classname="com.parkinglot.ParkingLotTest" time="0.009"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -22,7 +22,20 @@ class DummyParkingLotOwner implements Observer {
         isSpaceIsAvailableNotify++;
     }
 }
+class DummyParkingLotSecurityPerson implements Observer {
+    public int isParkingLotFullNotify = 0;
+    public int isSpaceIsAvailableNotify = 0;
 
+    @Override
+    public void isParkingLotFull() {
+        isParkingLotFullNotify++;
+    }
+
+    @Override
+    public void isSpaceIsAvailable() {
+        isSpaceIsAvailableNotify++;
+    }
+}
 public class ParkingLotTest {
 
     @Test
@@ -139,5 +152,32 @@ public class ParkingLotTest {
         assertEquals(1,owner.isSpaceIsAvailableNotify);
 
     }
+    @Test
+    void givenParkingLotWithCapacityTwo_WhenReachToCapacity_ThenNotifyToSecurityPerson() throws VehicleAlreadyPark, CapacityFullException {
+        DummyParkingLotSecurityPerson parkingLotSecurityPerson = new DummyParkingLotSecurityPerson();
+        ParkingLot parkingLot = new ParkingLot(2, parkingLotSecurityPerson);
+        Object vehicleOne = new Object();
+        Object vehicleTwo = new Object();
+        parkingLot.park(vehicleOne);
+        parkingLot.park(vehicleTwo);
 
+
+        assertEquals(1,parkingLotSecurityPerson.isParkingLotFullNotify);
+    }
+    @Test
+    void givenParkingLotWithCapacityTwo_WhenUnPark_ThenNotifyToSecurityPerson() throws VehicleAlreadyPark, CapacityFullException, CarNotFoundException {
+        DummyParkingLotSecurityPerson parkingLotSecurityPerson = new DummyParkingLotSecurityPerson();
+        ParkingLot parkingLot = new ParkingLot(2, parkingLotSecurityPerson);
+        Object vehicleOne = new Object();
+        Object vehicleTwo = new Object();
+        parkingLot.park(vehicleOne);
+        parkingLot.park(vehicleTwo);
+
+        assertEquals(1,parkingLotSecurityPerson.isParkingLotFullNotify);
+
+        parkingLot.unPark(vehicleTwo);
+
+        assertEquals(1,parkingLotSecurityPerson.isSpaceIsAvailableNotify);
+
+    }
 }
