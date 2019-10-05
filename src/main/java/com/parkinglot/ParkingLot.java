@@ -52,7 +52,11 @@ public class ParkingLot  {
         if (!isAlreadyParked(vehicle)) {
             throw new CarNotFoundException();
         }
-        return vehicles.remove(vehicles.indexOf(vehicle));
+        Object unParkVehicle=vehicles.remove(vehicles.indexOf(vehicle));
+        if(vehicles.size()!=size&&observer!=null){
+            observer.isSpaceIsAvailable();
+        }
+        return unParkVehicle;
     }
 
 }

@@ -70,7 +70,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.ParkingLotTest">
+  <component name="RunManager" selected="Gradle.ParkingLotTest.givenParkingLotWithCapacityTwo_WhenUnPark_ThenNotifyToOwner">
     <configuration name="Consumer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.parkinglot.Consumer" />
       <module name="ParkingLot.main" />
@@ -144,12 +144,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ParkingLotTest.givenParkingLotWithCapacityTwo_whenUnParkSameVehicle_thenShouldThrowException" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ParkingLotTest.givenParkingLotWithCapacityTwo_WhenUnPark_ThenNotifyToOwner" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.parkinglot.ParkingLotTest.givenParkingLotWithCapacityTwo_whenUnParkSameVehicle_thenShouldThrowException&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.parkinglot.ParkingLotTest.givenParkingLotWithCapacityTwo_WhenUnPark_ThenNotifyToOwner&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -166,11 +166,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.ParkingLotTest.givenParkingLotWithCapacityTwo_WhenUnPark_ThenNotifyToOwner" />
         <item itemvalue="Gradle.ParkingLotTest" />
         <item itemvalue="Gradle.ParkingLotTest.givenParkingLotWithCapacityTwo_WhenReachToCapacity_ThenNotifyToOwner" />
         <item itemvalue="Gradle.ParkingLotTest.givenParkingLotWithCapacityOne_whenUnParkVehicle_thenShouldReturnSpaceIsAvailable" />
         <item itemvalue="Application.Consumer" />
-        <item itemvalue="Gradle.ParkingLotTest.givenParkingLotWithCapacityTwo_whenUnParkSameVehicle_thenShouldThrowException" />
       </list>
     </recent_temporary>
   </component>
@@ -255,7 +255,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570251969283</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="[Sunil] Refactor. boolean park  to void park">
+      <created>1570252337558</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1570252337558</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -283,7 +290,8 @@
     <MESSAGE value="[Sunil|Dipak] Refactor unpark return type boolean to object" />
     <MESSAGE value="[Sunil] Refactor unpark and park method" />
     <MESSAGE value="[Sunil] Add dummy owner to check notification status" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Sunil] Add dummy owner to check notification status" />
+    <MESSAGE value="[Sunil] Refactor. boolean park  to void park" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Sunil] Refactor. boolean park  to void park" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ParkingLot$ParkingLotTest.ic" NAME="ParkingLotTest Coverage Results" MODIFIED="1570130008381" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

@@ -123,5 +123,21 @@ public class ParkingLotTest {
 
         assertEquals(1,owner.isParkingLotFullNotify);
     }
+    @Test
+    void givenParkingLotWithCapacityTwo_WhenUnPark_ThenNotifyToOwner() throws VehicleAlreadyPark, CapacityFullException, CarNotFoundException {
+        DummyParkingLotOwner owner = new DummyParkingLotOwner();
+        ParkingLot parkingLot = new ParkingLot(2, owner);
+        Object vehicleOne = new Object();
+        Object vehicleTwo = new Object();
+        parkingLot.park(vehicleOne);
+        parkingLot.park(vehicleTwo);
+
+        assertEquals(1,owner.isParkingLotFullNotify);
+
+        parkingLot.unPark(vehicleTwo);
+
+        assertEquals(1,owner.isSpaceIsAvailableNotify);
+
+    }
 
 }
