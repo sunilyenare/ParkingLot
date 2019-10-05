@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ef90b10-4cbc-4b22-b2bf-1c8223310350" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/parkinglot/ParkingLot.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/parkinglot/ParkingLot.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/parkinglot/ParkingLotTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/parkinglot/ParkingLotTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.parkinglot.ParkingLotTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/com.parkinglot.ParkingLotTest.html" afterDir="false" />
@@ -10,12 +9,7 @@
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/com.parkinglot.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/com.parkinglot.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.parkinglot.ParkingLotTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-com.parkinglot.ParkingLotTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/parkinglot/Observer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/parkinglot/Observer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/parkinglot/ParkingLot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/parkinglot/ParkingLot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/parkinglot/ParkingLotOwner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/parkinglot/exception/CapacityFullException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/parkinglot/exception/CapacityFullException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/parkinglot/exception/CarNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/parkinglot/exception/CarNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/parkinglot/exception/VehicleAlreadyPark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/parkinglot/exception/VehicleAlreadyPark.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/parkinglot/ParkingLotTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/parkinglot/ParkingLotTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -254,7 +248,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570171601249</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="[Sunil] Add dummy owner to check notification status">
+      <created>1570251969283</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1570251969283</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -281,7 +282,8 @@
     <MESSAGE value="[Sunil] Add. Exception for unpark vehicle which is not present in parking lot" />
     <MESSAGE value="[Sunil|Dipak] Refactor unpark return type boolean to object" />
     <MESSAGE value="[Sunil] Refactor unpark and park method" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Sunil] Refactor unpark and park method" />
+    <MESSAGE value="[Sunil] Add dummy owner to check notification status" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Sunil] Add dummy owner to check notification status" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ParkingLot$ParkingLotTest.ic" NAME="ParkingLotTest Coverage Results" MODIFIED="1570130008381" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

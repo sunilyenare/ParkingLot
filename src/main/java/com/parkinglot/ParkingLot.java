@@ -22,7 +22,7 @@ public class ParkingLot  {
         this.observer =observer;
         this.vehicles = new ArrayList<>();
     }
-    public boolean park(Object vehicle) throws CapacityFullException, VehicleAlreadyPark {
+    public void park(Object vehicle) throws CapacityFullException, VehicleAlreadyPark {
         if (!isSpaceAvailable()) {
             throw new CapacityFullException();
         }
@@ -35,7 +35,6 @@ public class ParkingLot  {
         if(vehicles.size()==size&&observer!=null){
            observer.isParkingLotFull();
         }
-        return true;
     }
 
     private boolean isAlreadyParked(Object vehicle) {

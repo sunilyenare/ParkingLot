@@ -29,7 +29,7 @@ public class ParkingLotTest {
     void givenParkingLot_whenIsAvailable_ThenShouldBeAvailable() throws CapacityFullException, VehicleAlreadyPark {
         ParkingLot parkingLot = new ParkingLot(1);
 
-        assertTrue(parkingLot.park(new Object()));
+        assertDoesNotThrow(()->parkingLot.park(new Object()));
     }
 
     @Test
@@ -37,7 +37,7 @@ public class ParkingLotTest {
         ParkingLot parkingLot = new ParkingLot(1);
         Object vehicle1 = new Object();
         Object vehicle2 = new Object();
-        assertTrue(parkingLot.park(vehicle1));
+       parkingLot.park(vehicle1);
        assertThrows(CapacityFullException.class, () -> {
             parkingLot.park(vehicle2);
         });
@@ -49,7 +49,7 @@ public class ParkingLotTest {
         ParkingLot parkingLot = new ParkingLot(2);
         Object vehicle = new Object();
 
-        assertTrue(parkingLot.park(vehicle));
+        parkingLot.park(vehicle);
        assertThrows(VehicleAlreadyPark.class, () -> {
             parkingLot.park(vehicle);
         });
@@ -61,7 +61,7 @@ public class ParkingLotTest {
         ParkingLot parkingLot = new ParkingLot(1);
         Object vehicle = new Object();
 
-        assertTrue(parkingLot.park(vehicle));
+       parkingLot.park(vehicle);
         assertEquals(vehicle, parkingLot.unPark(vehicle));
     }
 
