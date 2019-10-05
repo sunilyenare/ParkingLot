@@ -3,6 +3,8 @@ package com.parkinglot;
 import com.parkinglot.exception.CapacityFullException;
 import com.parkinglot.exception.VehicleAlreadyPark;
 
+import java.util.Arrays;
+
 public class Consumer {
     public static void park(ParkingLot parkingLotOne, ParkingLot parkingLotTwo) throws CapacityFullException, VehicleAlreadyPark {
         Object carA = new Object() {
@@ -38,6 +40,6 @@ public class Consumer {
     }
 
     public static void main(String args[]) throws CapacityFullException, VehicleAlreadyPark {
-        park(new ParkingLot(2), new ParkingLot(4));
+        park(new ParkingLot(2, Arrays.asList()), new ParkingLot(4, Arrays.asList()));
     }
 }

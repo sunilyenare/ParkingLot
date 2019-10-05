@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7ef90b10-4cbc-4b22-b2bf-1c8223310350" name="Default Changelist" comment="">
+    <list default="true" id="7ef90b10-4cbc-4b22-b2bf-1c8223310350" name="Default Changelist" comment="Refactor. custome exception to checked exception">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/parkinglot/DummyParkingLotOwner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/parkinglot/DummyParkingLotSecurityPerson.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/parkinglot/ParkingLot.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/parkinglot/ParkingLot.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/parkinglot/ParkingLotTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/parkinglot/ParkingLotTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.parkinglot.ParkingLotTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/com.parkinglot.ParkingLotTest.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/com.parkinglot.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/com.parkinglot.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.parkinglot.ParkingLotTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-com.parkinglot.ParkingLotTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/parkinglot/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/parkinglot/Consumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/parkinglot/ParkingLot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/parkinglot/ParkingLot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/parkinglot/ParkingLotTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/parkinglot/ParkingLotTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,6 +55,9 @@
     <property name="extract.method.default.visibility" value="private" />
     <property name="full.screen.before.presentation.mode" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/com/parkinglot" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
@@ -69,7 +77,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.ParkingLotTest.givenParkingLotWithCapacity_WhenUnPark_ThenNotifyToSecurityPersonAndOwner">
+  <component name="RunManager" selected="Gradle.ParkingLotTest">
     <configuration name="ParkingLotTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -172,10 +180,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.ParkingLotTest.givenParkingLotWithCapacity_WhenUnPark_ThenNotifyToSecurityPersonAndOwner" />
-        <item itemvalue="Gradle.ParkingLotTest.givenParkingLotWithCapacityTwo_WhenUnPark_ThenNotifyToSecurityPersonAndOwner" />
         <item itemvalue="Gradle.ParkingLotTest" />
         <item itemvalue="Gradle.ParkingLotTest.givenParkingLotWithCapacityTwo_WhenUnPark_ThenNotifyToSecurityPerson" />
+        <item itemvalue="Gradle.ParkingLotTest.givenParkingLotWithCapacity_WhenUnPark_ThenNotifyToSecurityPersonAndOwner" />
+        <item itemvalue="Gradle.ParkingLotTest.givenParkingLotWithCapacityTwo_WhenUnPark_ThenNotifyToSecurityPersonAndOwner" />
         <item itemvalue="Gradle.ParkingLotTest.givenParkingLotWithCapacityTwo_WhenUnPark_ThenNotifyToOwner" />
       </list>
     </recent_temporary>
@@ -282,7 +290,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570252873607</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Refactor. custome exception to checked exception">
+      <created>1570255223535</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1570255223535</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -313,7 +328,8 @@
     <MESSAGE value="[Sunil] Refactor. boolean park  to void park" />
     <MESSAGE value="[Sunil] Add. unpark notification for owner" />
     <MESSAGE value="[Sunil] Add. park and unpark notification for security person" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Sunil] Add. park and unpark notification for security person" />
+    <MESSAGE value="Refactor. custome exception to checked exception" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor. custome exception to checked exception" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ParkingLot$ParkingLotTest.ic" NAME="ParkingLotTest Coverage Results" MODIFIED="1570130008381" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
